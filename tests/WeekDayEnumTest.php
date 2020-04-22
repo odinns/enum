@@ -67,6 +67,20 @@ class WeekDayEnumTest extends TestCase
     }
 
     /** @test */
+    public function can_represent_itself_as_select_array()
+    {
+        $this->assertEquals([
+            1 => "Montag",
+            2 => "Dienstag",
+            3 => "Mittwoch",
+            4 => "Donnerstag",
+            5 => "Freitag",
+            6 => "Samstag",
+            7 => "Sonntag",
+        ], WeekDayEnum::toSelectArray());
+    }
+
+    /** @test */
     public function can_represent_its_names_as_array()
     {
         $this->assertEquals([

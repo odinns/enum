@@ -204,6 +204,11 @@ abstract class Enum implements Enumerable, JsonSerializable
         return array_combine(static::getValues(), static::getIndices());
     }
 
+    public static function toSelectArray(): array
+    {
+        return array_combine(static::getIndices(), static::getValues());
+    }
+
     /**
      * @return \Spatie\Enum\Enumerable[]
      */

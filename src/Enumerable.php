@@ -96,6 +96,14 @@ interface Enumerable
     public static function toArray(): array;
 
     /**
+     * Get the whole enum as array for HTML select options.
+     * key => index.
+     *
+     * @return array
+     */
+    public static function toSelectArray(): array;
+
+    /**
      * Check if the given index is a valid one.
      *
      * @param int $index
